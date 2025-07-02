@@ -1,0 +1,19 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="{% url 'index' %}">Sistema Hospitalar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="{% url 'pacientes' %}">Pacientes</a></li>
+        <li class="nav-item"><a class="nav-link" href="{% url 'medicos' %}">Médicos</a></li>
+        <li class="nav-item"><a class="nav-link" href="{% url 'enfermeiros' %}">Enfermeiros</a></li>
+        <li class="nav-item"><a class="nav-link" href="{% url 'prescricoes' %}">Prescrições</a></li>
+        <li class="nav-item"><a class="nav-link" href="{% url 'medicamentos' %}">Medicamentos</a></li>
+        <li class="nav-item"><a class="nav-link" href="{% url 'administracoes' %}">Administração</a></li>
+        <li class="nav-item"><a class="nav-link" href="{% url 'alertas' %}">Alertas</a></li>        
+      </ul>
+    </div>
+  </div>
+</nav>

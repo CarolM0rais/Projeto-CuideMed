@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %}Medicamentos{% endblock %}
+
+{% block content %}
+  <h2>Medicamentos</h2>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>ID</th><th>Nome</th><th>Descrição</th><th>Validade</th><th>Estoque</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for medicamento in medicamentos %}
+      <tr>
+        <td>{{ medicamento.id }}</td>
+        <td>{{ medicamento.nome }}</td>
+        <td>{{ medicamento.descricao }}</td>
+        <td>{{ medicamento.data_validade }}</td>
+        <td>{{ medicamento.quantidade_estoque }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}

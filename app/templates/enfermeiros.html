@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %}Enfermeiros{% endblock %}
+
+{% block content %}
+  <h2>Lista de Enfermeiros</h2>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>ID</th><th>Nome</th><th>Turno</th><th>Status</th><th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for enfermeiro in enfermeiros %}
+      <tr>
+        <td>{{ enfermeiro.id }}</td>
+        <td>{{ enfermeiro.nome }}</td>
+        <td>{{ enfermeiro.turno }}</td>
+        <td>{{ enfermeiro.status }}</td>
+        <td>{{ enfermeiro.email }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}
